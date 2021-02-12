@@ -1,6 +1,4 @@
 module.exports = (err, req, res, next) => {
-    //log dulu
-    // console.log(err.msg);
 
     if (err.name == "SequelizeValidationError") {
         const errors = err.errors.map(el => el.message)
@@ -16,7 +14,4 @@ module.exports = (err, req, res, next) => {
     if (err.name == "JsonWebTokenError") {
         res.status(401).json(err.message)
     }
-    // else if (err.name == 'customError') {
-    //     res.status(err.status).json({ message: err.msg })
-    // }
 }
