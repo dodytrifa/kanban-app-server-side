@@ -6,7 +6,7 @@
 ---
 # URL
 ```
-Client URL : http://localhost:8000
+
 Server URL : http://localhost:3000
 ```
 ---
